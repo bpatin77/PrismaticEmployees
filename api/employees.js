@@ -70,7 +70,7 @@ router.delete("/:id", async (req, res, next) => {
 
     // Delete the employee
     await prisma.employee.delete({ where: { id: +id } });
-    res.sendStatus(201);
+    res.sendStatus(204);
   } catch (e) {
     next(e);
   }
